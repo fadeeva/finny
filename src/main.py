@@ -1,28 +1,26 @@
-import keyboard
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.uix.button import Button
+from kivy.graphics.vertex_instructions import Line
+from kivy.graphics.vertex_instructions import Rectangle
+from kivy.graphics.context_instructions import Color
+from kivy.metrics import dp
+from kivy.core.window import Window
 
-rus_eng = { 'Й':'Q','Ц':'W','У':'E','К':'R','Е':'T',
-            'Н':'Y','Г':'U','Ш':'I','Щ':'O','З':'P',
-            'Х':'{','Ъ':'}','Ф':'A','Ы':'S','В':'D',
-            'А':'F','П':'G','Р':'H','О':'J','Л':'K',
-            'Д':'L','Ж':':','Э':'"','Я':'Z','Ч':'X',
-            'С':'C','М':'V','И':'B','Т':'N','Ь':'M',
-            'Б':'<','Ю':'>','Ё':'~','й':'q','ц':'w',
-            'у':'e','к':'r','е':'t','н':'y','г':'u',
-            'ш':'i','щ':'o','з':'p','х':'[','ъ':']',
-            'ф':'a','ы':'s','в':'d','а':'f','п':'g',
-            'р':'h','о':'j','л':'k','д':'l','ж':';',
-            'э':"'",'я':'z','ч':'x','с':'c','м':'v',
-            'и':'b','т':'n','ь':'m','б':',','ю':'.',
-            'ё':'`'}
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.relativelayout import RelativeLayout
+from kivy.uix.anchorlayout import AnchorLayout
 
-while True:
-    key = keyboard.read_key()
-    if key == "enter":
-            break
-    
-    if key not in ('shift', 'ctrl', 'alt', 'esc'):
-        print(rus_eng[key[0]])
-    
+class FinnyLayout(BoxLayout):
+    pass
 
+class finnyApp(App):
     
-    
+    def build(self):
+        Window.clearcolor = (.06, .05, .1, 1)
+        Window.size = (685, 670)
+        return FinnyLayout()
+
+
+if __name__ == '__main__':
+    finnyApp().run()

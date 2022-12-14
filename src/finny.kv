@@ -1,0 +1,152 @@
+
+<FinnyLayout>:
+    padding: 48
+    orientation: "vertical"
+    
+    RelativeLayout:
+
+        BoxLayout:
+            size_hint: None, None
+            size: 117, 57
+            pos: 0, 70
+            Image:
+                source: "finny_logo.png"
+            
+    BoxLayout:
+
+        RelativeLayout:
+            size_hint: None, None
+            width: 330
+            PV:
+        
+        BoxLayout:
+            orientation: "vertical"
+            
+            RelativeLayout:
+                EARAPR:
+                    size_hint: None, None
+                    pos: 6, 70
+
+            RelativeLayout:
+                FV:
+                    size_hint: None, None
+                    pos: 48, 0
+
+
+    RelativeLayout:
+        Label:
+            text: "Input data"
+    RelativeLayout:
+        Label:
+            text: "Answer"
+    RelativeLayout:
+        Label:
+            text: "History"
+            
+<PV@RelativeLayout>:
+    Button:
+        text: "PV"
+        size: 125, 78
+        size_hint: None, None
+        pos: 85, 47
+        on_press: print("Hello!")
+
+    Button:
+        text: "bond"
+        size: 67, 30
+        size_hint: None, None
+        pos: 143, 127
+        on_press: print("Hello!")
+
+    Button:
+        text: "annuity"
+        size: 83, 30
+        size_hint: None, None
+        pos: 0, 95
+        on_press: print("Hello!")
+
+    Button:
+        text: "annuity\ndue"
+        size: 83, 45
+        size_hint: None, None
+        pos: 0, 47
+        on_press: print("Hello!")
+
+    Button:
+        text: "perpetuity"
+        size: 117, 30
+        size_hint: None, None
+        pos: 93, 15
+        on_press: print("Hello!")
+
+    Button:
+        text: "growing\nperpetuity"
+        size: 111, 45
+        size_hint: None, None
+        pos: 212, 47
+        on_press: print("Hello!")
+
+    Button:
+        text: "perpetuity\ndue"
+        size: 111, 45
+        size_hint: None, None
+        pos: 212, 0
+        on_press: print("Hello!")
+ 
+<FV@RelativeLayout>:
+    Button:
+        text: "FV"
+        size: 125, 78
+        size_hint: None, None
+        pos: 84, 0
+        on_press: print("Hello!")
+
+    Button:
+        text: "bond"
+        size: 67, 30
+        size_hint: None, None
+        pos: 142, 80
+        on_press: print("Hello!")
+
+    Button:
+        text: "annuity"
+        size: 83, 30
+        size_hint: None, None
+        pos: 0, 48
+        on_press: print("Hello!")
+
+    Button:
+        text: "annuity\ndue"
+        size: 83, 45
+        size_hint: None, None
+        pos: 0, 0
+        on_press: print("Hello!")
+        
+<EARAPR@RelativeLayout>:
+    Button:
+        text: "EAR"
+        size: 67, 30
+        size_hint: None, None
+        pos: 0, 47
+        on_press: print("Hello!")
+
+    Button:
+        text: "APR"
+        size: 67, 30
+        size_hint: None, None
+        pos: 68, 47
+        on_press: print("Hello!")
+
+    Button:
+        text: "fromAPR\ntoRc"
+        size: 98, 45
+        size_hint: None, None
+        pos: 68, 0
+        on_press: print("Hello!")
+
+    Button:
+        text: "fromRc\ntoAPR"
+        size: 83, 45
+        size_hint: None, None
+        pos: 167, 0
+        on_press: print("Hello!")           
