@@ -45,53 +45,168 @@
             
 <PV@RelativeLayout>:
     Button:
-        text: "PV"
+        markup: True
+        text: "[font=fonts/ClashDisplay-Semibold]P[/font]V"
         size: 125, 78
         size_hint: None, None
         pos: 85, 47
+        color: .06, .05, .1, 1
+        font_name: "ClashDisplay Regular"
+        font_size: "39dp"
+        
         on_press: print("Hello!")
+        
+        background_color: (0,0,0,0)
+        background_normal: ''
+        
+        canvas.before:
+            Color:
+                rgba: (247/255,206/255,38/255,1)
+            RoundedRectangle:
+                size: (125, 78)
+                pos: 85, 47
+                radius: [6]
 
     Button:
-        text: "bond"
+        markup: True
+        text: "[font=fonts/ClashDisplay-Semibold]b[/font]ond"
         size: 67, 30
         size_hint: None, None
         pos: 143, 127
+        color: .06, .05, .1, 1
+        font_name: "ClashDisplay Regular"
+        font_size: "18dp"
+        
         on_press: print("Hello!")
+        
+        background_color: (0,0,0,0)
+        background_normal: ''
+        
+        canvas.before:
+            Color:
+                rgba: (247/255,206/255,38/255,1)
+            RoundedRectangle:
+                size: 67, 30
+                pos: 143, 127
+                radius: [6]
+        
+        
 
     Button:
-        text: "annuity"
+        markup: True
+        text: "[font=fonts/ClashDisplay-Semibold]a[/font]nnuity"
         size: 83, 30
         size_hint: None, None
         pos: 0, 95
+        color: .06, .05, .1, 1
+        font_name: "ClashDisplay Regular"
+        font_size: "18dp"
+        
         on_press: print("Hello!")
+        
+        background_color: (0,0,0,0)
+        background_normal: ''
+        
+        canvas.before:
+            Color:
+                rgba: (34/255,160/255,61/255,1)
+            RoundedRectangle:
+                size: 83, 30
+                pos: 0, 95
+                radius: [6]
 
     Button:
-        text: "annuity\ndue"
+        markup: True
+        text: "[font=fonts/ClashDisplay-Semibold]a[/font]nnuity\ndue"
         size: 83, 45
         size_hint: None, None
         pos: 0, 47
+        color: .06, .05, .1, 1
+        font_name: "ClashDisplay Regular"
+        font_size: "18dp"
+        
         on_press: print("Hello!")
+        
+        background_color: (0,0,0,0)
+        background_normal: ''
+        
+        canvas.before:
+            Color:
+                rgba: (34/255,160/255,61/255,1)
+            RoundedRectangle:
+                size: 83, 45
+                pos: 0, 47
+                radius: [6]
 
     Button:
-        text: "perpetuity"
+        markup: True
+        text: "[font=fonts/ClashDisplay-Semibold]p[/font]erpetuity"
         size: 117, 30
         size_hint: None, None
         pos: 93, 15
+        color: .06, .05, .1, 1
+        font_name: "ClashDisplay Regular"
+        font_size: "18dp"
+        
         on_press: print("Hello!")
+        
+        background_color: (0,0,0,0)
+        background_normal: ''
+        
+        canvas.before:
+            Color:
+                rgba: (249/255,73/255,38/255,1)
+            RoundedRectangle:
+                size: 117, 30
+                pos: 93, 15
+                radius: [6]
 
     Button:
-        text: "growing\nperpetuity"
+        markup: True
+        text: "[font=fonts/ClashDisplay-Semibold]g[/font]rowing\nperpetuity"
         size: 111, 45
         size_hint: None, None
         pos: 212, 47
+        color: .06, .05, .1, 1
+        font_name: "ClashDisplay Regular"
+        font_size: "18dp"
+        
         on_press: print("Hello!")
+        
+        background_color: (0,0,0,0)
+        background_normal: ''
+        
+        canvas.before:
+            Color:
+                rgba: (249/255,73/255,38/255,1)
+            RoundedRectangle:
+                size: 111, 45
+                pos: 212, 47
+                radius: [6]
 
     Button:
         text: "perpetuity\ndue"
+        markup: True
+        text: "[font=fonts/ClashDisplay-Semibold]p[/font]erpetuity\ndue"
         size: 111, 45
         size_hint: None, None
         pos: 212, 0
+        color: .06, .05, .1, 1
+        font_name: "ClashDisplay Regular"
+        font_size: "18dp"
+        
         on_press: print("Hello!")
+        
+        background_color: (0,0,0,0)
+        background_normal: ''
+        
+        canvas.before:
+            Color:
+                rgba: (249/255,73/255,38/255,1)
+            RoundedRectangle:
+                size: 111, 45
+                pos: 212, 0
+                radius: [6]
  
 <FV@RelativeLayout>:
     Button:

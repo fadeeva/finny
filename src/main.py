@@ -11,6 +11,8 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.anchorlayout import AnchorLayout
 
+from kivy.core.text import LabelBase
+
 class FinnyLayout(BoxLayout):
     pass
 
@@ -22,5 +24,7 @@ class finnyApp(App):
         return FinnyLayout()
 
 
+LabelBase.register(name='ClashDisplay Regular', fn_regular='fonts/ClashDisplay-Regular.ttf')
+    
 if __name__ == '__main__':
     finnyApp().run()
