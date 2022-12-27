@@ -13,15 +13,42 @@ from kivy.uix.anchorlayout import AnchorLayout
 
 from kivy.core.text import LabelBase
 
+import re
+
 class FinnyLayout(BoxLayout):
     pass
 
-class finnyApp(App):
+
+def clean_text(dirty):
+    dirty = dirty.replace('[/font]', '')
+    dirty = dirty.replace('\n', ' ')
+    dirty = re.sub(r'\[font=fonts\/[a-zA-Z0-9_-]*\]', '', dirty)
+    return dirty.lower()
+
+class PV(RelativeLayout):
+    def on_button_click(self, widget):
+        print(clean_text(widget.text))
     
+class FV(RelativeLayout):
+    def on_button_click(self, widget):
+        print(clean_text(widget.text))
+
+class EARAPR(RelativeLayout):
+    def on_button_click(self, widget):
+        print(clean_text(widget.text))
+
+
+class TextAndLabel(BoxLayout):
+    pass
+
+class finnyApp(App):
     def build(self):
         Window.clearcolor = (.06, .05, .1, 1)
         Window.size = (685, 670)
         return FinnyLayout()
+    
+    def add_textbox(self):
+            self.root.ids.ti_box.add_widget(TextAndLabel())
 
 
 LabelBase.register(name='ClashDisplay Regular', fn_regular='fonts/ClashDisplay-Regular.ttf')

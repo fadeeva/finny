@@ -34,6 +34,7 @@
 
 
     RelativeLayout:
+        id: ti_box
         Label:
             text: "Input data"
     RelativeLayout:
@@ -57,7 +58,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "39dp"
         
-        on_press: print("Hello!")
+        on_press: app.add_textbox()
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -80,7 +81,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -103,7 +104,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -127,7 +128,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -150,7 +151,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -174,7 +175,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -198,7 +199,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -224,7 +225,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "39dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -247,7 +248,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -270,7 +271,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -294,7 +295,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -318,7 +319,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -341,7 +342,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -366,7 +367,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -391,7 +392,7 @@
         font_name: "ClashDisplay Regular"
         font_size: "18dp"
         
-        on_press: print("Hello!")
+        on_press: root.on_button_click(self)
         
         background_color: (0,0,0,0)
         background_normal: ''
@@ -403,3 +404,10 @@
                 size: 83, 45
                 pos: 169, 0
                 radius: [6]
+
+<TextAndLabel>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+    TextInput:
+        id: ti
