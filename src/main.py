@@ -15,7 +15,10 @@ from kivy.core.text import LabelBase
 
 import re
 
-class FinnyLayout(BoxLayout):
+class CashFlowLayout(BoxLayout):
+    pass
+
+class MainMenuLayout(BoxLayout):
     pass
 
 
@@ -44,8 +47,8 @@ class TextAndLabel(BoxLayout):
 class finnyApp(App):
     def build(self):
         Window.clearcolor = (.06, .05, .1, 1)
-        Window.size = (685, 670)
-        return FinnyLayout()
+        Window.size = (685, 710)
+        return MainMenuLayout()
     
     def add_textbox(self):
             self.root.ids.ti_box.add_widget(TextAndLabel())

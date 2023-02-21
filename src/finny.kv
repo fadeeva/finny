@@ -1,5 +1,210 @@
+MainMenuLayout:
 
-<FinnyLayout>:
+<MainMenuLayout>:
+    padding: 48, 38, 48, 0
+    orientation: "vertical"
+    
+    BoxLayout:
+        size_hint: None, None
+        size: 117, 57
+        pos: 0, 0
+        Image:
+            source: "finny_logo.png"
+    
+    BoxLayout:
+
+        RelativeLayout:
+            size_hint: None, None
+            
+            Button:
+                markup: True
+                text: "[font=fonts/ClashDisplay-Semibold]S[/font]tock[font=fonts/ClashDisplay-Semibold]I[/font]nfo"
+                size: 143, 39
+                size_hint: None, None
+                pos: 132, 418
+                color: .06, .05, .1, 1
+                font_name: "ClashDisplay Regular"
+                font_size: "24dp"
+
+                on_press: root.on_button_click(self)
+
+                background_color: (0,0,0,0)
+                background_normal: ''
+
+                canvas.before:
+                    Color:
+                        rgba: (239/255,231/255,223/255,1)
+                    RoundedRectangle:
+                        size: 143, 39
+                        pos: 132, 418
+                        radius: [6]
+            
+            Button:
+                markup: True
+                text: "[font=fonts/ClashDisplay-Semibold]S[/font]tock[font=fonts/ClashDisplay-Semibold]\nP[/font]rofit"
+                line_height: .9
+                size: 102, 78
+                size_hint: None, None
+                pos: 132, 336
+                color: .06, .05, .1, 1
+                font_name: "ClashDisplay Regular"
+                font_size: "24dp"
+
+                on_press: root.on_button_click(self)
+
+                background_color: (0,0,0,0)
+                background_normal: ''
+
+                canvas.before:
+                    Color:
+                        rgba: (34/255,160/255,61/255,1)
+                    RoundedRectangle:
+                        size: 102, 78
+                        pos: 132, 336
+                        radius: [6]
+            
+            Button:
+                markup: True
+                text: "[font=fonts/ClashDisplay-Semibold]C[/font]ash[font=fonts/ClashDisplay-Semibold]F[/font]low"
+                size: 143, 39
+                size_hint: None, None
+                pos: 238, 375
+                color: .06, .05, .1, 1
+                font_name: "ClashDisplay Regular"
+                font_size: "24dp"
+
+                on_press: root.on_button_click(self)
+
+                background_color: (0,0,0,0)
+                background_normal: ''
+
+                canvas.before:
+                    Color:
+                        rgba: (249/255,73/255,38/255,1)
+                    RoundedRectangle:
+                        size: 143, 39
+                        pos: 238, 375
+                        radius: [6]
+            
+            Button:
+                markup: True
+                text: "[font=fonts/ClashDisplay-Semibold]P[/font]ortfolio[font=fonts/ClashDisplay-Semibold]\nM[/font]anagement"
+                line_height: .9
+                size: 185, 78
+                size_hint: None, None
+                pos: 238, 293
+                color: .06, .05, .1, 1
+                font_name: "ClashDisplay Regular"
+                font_size: "24dp"
+
+                on_press: root.on_button_click(self)
+
+                background_color: (0,0,0,0)
+                background_normal: ''
+
+                canvas.before:
+                    Color:
+                        rgba: (247/255,206/255,38/255,1)
+                    RoundedRectangle:
+                        size: 185, 78
+                        pos: 238, 293
+                        radius: [6]
+            
+            Button:
+                markup: True
+                text: "[font=fonts/ClashDisplay-Semibold]F[/font]utures"
+                size: 130, 39
+                size_hint: None, None
+                pos: 238, 250
+                color: .06, .05, .1, 1
+                font_name: "ClashDisplay Regular"
+                font_size: "24dp"
+
+                on_press: root.on_button_click(self)
+
+                background_color: (0,0,0,0)
+                background_normal: ''
+
+                canvas.before:
+                    Color:
+                        rgba: (34/255,160/255,61/255,1)
+                    RoundedRectangle:
+                        size: 130, 39
+                        pos: 238, 250
+                        radius: [6]
+            
+            Button:
+                markup: True
+                text: "[font=fonts/ClashDisplay-Semibold]M[/font]ultipliers"
+                size: 147, 39
+                size_hint: None, None
+                pos: 238, 207
+                color: .06, .05, .1, 1
+                font_name: "ClashDisplay Regular"
+                font_size: "24dp"
+
+                on_press: root.on_button_click(self)
+
+                background_color: (0,0,0,0)
+                background_normal: ''
+
+                canvas.before:
+                    Color:
+                        rgba: (249/255,73/255,38/255,1)
+                    RoundedRectangle:
+                        size: 147, 39
+                        pos: 238, 207
+                        radius: [6]
+            
+            Button:
+                markup: True
+                text: "[font=fonts/ClashDisplay-Semibold]O[/font]ptions"
+                size: 119, 39
+                size_hint: None, None
+                pos: 372, 250
+                color: .06, .05, .1, 1
+                font_name: "ClashDisplay Regular"
+                font_size: "24dp"
+
+                on_press: root.on_button_click(self)
+
+                background_color: (0,0,0,0)
+                background_normal: ''
+
+                canvas.before:
+                    Color:
+                        rgba: (239/255,231/255,223/255,1)
+                    RoundedRectangle:
+                        size: 119, 39
+                        pos: 372, 250
+                        radius: [6]
+            
+            Button:
+                markup: True
+                text: "[font=fonts/ClashDisplay-Semibold]C[/font]FD"
+                size: 78, 39
+                size_hint: None, None
+                pos: 427, 293
+                color: .06, .05, .1, 1
+                font_name: "ClashDisplay Regular"
+                font_size: "24dp"
+
+                on_press: root.on_button_click(self)
+
+                background_color: (0,0,0,0)
+                background_normal: ''
+
+                canvas.before:
+                    Color:
+                        rgba: (34/255,160/255,61/255,1)
+                    RoundedRectangle:
+                        size: 78, 39
+                        pos: 427, 293
+                        radius: [6]
+
+
+
+<CashFlowLayout>:
     padding: 48
     orientation: "vertical"
     
