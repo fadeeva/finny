@@ -1,19 +1,54 @@
 MainMenuLayout:
 
 <MainMenuLayout>:
-    padding: 48, 38, 48, 0
     orientation: "vertical"
+    padding: 48, 38, 48, 0
+    
+    canvas:
+        Color:
+            rgba: (249/255,73/255,38/255,1)
+        Rectangle:
+            size: 176, 212
+            pos: 0, 374
+            
+        Color:
+            rgba: (239/255,231/255,223/255,1)
+        Rectangle:
+            size: 282, 370
+            pos: 0, 0
+        
+        Color:
+            rgba: (34/255,160/255,61/255,1)
+        Rectangle:
+            size: 359, 254
+            pos: 326, 456
+        
+        Color:
+            rgba: (247/255,206/255,38/255,1)
+        Rectangle:
+            size: 248, 245
+            pos: 437, 39
+    
     
     BoxLayout:
         size_hint: None, None
         size: 117, 57
-        pos: 0, 0
         Image:
-            source: "finny_logo.png"
+            source: "finny-logo_white.png"
+    
+    RelativeLayout:
+        Label:
+            markup: True
+            text: "[font=fonts/consolab]q[/font] - Close"
+            color: (239/255,231/255,223/255,1)
+            pos: 260, -440
+            font_size: "18dp"
+            font_name: "Consolas Regular"
     
     BoxLayout:
-
+        
         RelativeLayout:
+            
             size_hint: None, None
             
             Button:
@@ -21,7 +56,7 @@ MainMenuLayout:
                 text: "[font=fonts/ClashDisplay-Semibold]S[/font]tock[font=fonts/ClashDisplay-Semibold]I[/font]nfo"
                 size: 143, 39
                 size_hint: None, None
-                pos: 132, 418
+                pos: 132, 456
                 color: .06, .05, .1, 1
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
@@ -36,7 +71,7 @@ MainMenuLayout:
                         rgba: (239/255,231/255,223/255,1)
                     RoundedRectangle:
                         size: 143, 39
-                        pos: 132, 418
+                        pos: 132, 456
                         radius: [6]
             
             Button:
@@ -45,7 +80,7 @@ MainMenuLayout:
                 line_height: .9
                 size: 102, 78
                 size_hint: None, None
-                pos: 132, 336
+                pos: 132, 374
                 color: .06, .05, .1, 1
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
@@ -60,7 +95,7 @@ MainMenuLayout:
                         rgba: (34/255,160/255,61/255,1)
                     RoundedRectangle:
                         size: 102, 78
-                        pos: 132, 336
+                        pos: 132, 374
                         radius: [6]
             
             Button:
@@ -68,7 +103,7 @@ MainMenuLayout:
                 text: "[font=fonts/ClashDisplay-Semibold]C[/font]ash[font=fonts/ClashDisplay-Semibold]F[/font]low"
                 size: 143, 39
                 size_hint: None, None
-                pos: 238, 375
+                pos: 238, 413
                 color: .06, .05, .1, 1
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
@@ -83,7 +118,7 @@ MainMenuLayout:
                         rgba: (249/255,73/255,38/255,1)
                     RoundedRectangle:
                         size: 143, 39
-                        pos: 238, 375
+                        pos: 238, 413
                         radius: [6]
             
             Button:
@@ -92,7 +127,7 @@ MainMenuLayout:
                 line_height: .9
                 size: 185, 78
                 size_hint: None, None
-                pos: 238, 293
+                pos: 238, 331
                 color: .06, .05, .1, 1
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
@@ -107,7 +142,7 @@ MainMenuLayout:
                         rgba: (247/255,206/255,38/255,1)
                     RoundedRectangle:
                         size: 185, 78
-                        pos: 238, 293
+                        pos: 238, 331
                         radius: [6]
             
             Button:
@@ -115,7 +150,7 @@ MainMenuLayout:
                 text: "[font=fonts/ClashDisplay-Semibold]F[/font]utures"
                 size: 130, 39
                 size_hint: None, None
-                pos: 238, 250
+                pos: 238, 288
                 color: .06, .05, .1, 1
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
@@ -130,7 +165,7 @@ MainMenuLayout:
                         rgba: (34/255,160/255,61/255,1)
                     RoundedRectangle:
                         size: 130, 39
-                        pos: 238, 250
+                        pos: 238, 288
                         radius: [6]
             
             Button:
@@ -138,7 +173,7 @@ MainMenuLayout:
                 text: "[font=fonts/ClashDisplay-Semibold]M[/font]ultipliers"
                 size: 147, 39
                 size_hint: None, None
-                pos: 238, 207
+                pos: 238, 245
                 color: .06, .05, .1, 1
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
@@ -153,7 +188,7 @@ MainMenuLayout:
                         rgba: (249/255,73/255,38/255,1)
                     RoundedRectangle:
                         size: 147, 39
-                        pos: 238, 207
+                        pos: 238, 245
                         radius: [6]
             
             Button:
@@ -161,7 +196,7 @@ MainMenuLayout:
                 text: "[font=fonts/ClashDisplay-Semibold]O[/font]ptions"
                 size: 119, 39
                 size_hint: None, None
-                pos: 372, 250
+                pos: 372, 288
                 color: .06, .05, .1, 1
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
@@ -176,7 +211,7 @@ MainMenuLayout:
                         rgba: (239/255,231/255,223/255,1)
                     RoundedRectangle:
                         size: 119, 39
-                        pos: 372, 250
+                        pos: 372, 288
                         radius: [6]
             
             Button:
@@ -184,7 +219,7 @@ MainMenuLayout:
                 text: "[font=fonts/ClashDisplay-Semibold]C[/font]FD"
                 size: 78, 39
                 size_hint: None, None
-                pos: 427, 293
+                pos: 427, 331
                 color: .06, .05, .1, 1
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
@@ -199,9 +234,10 @@ MainMenuLayout:
                         rgba: (34/255,160/255,61/255,1)
                     RoundedRectangle:
                         size: 78, 39
-                        pos: 427, 293
+                        pos: 427, 331
                         radius: [6]
-
+        
+    
 
 
 <CashFlowLayout>:

@@ -55,6 +55,7 @@ class finnyApp(App):
 
 
 LabelBase.register(name='ClashDisplay Regular', fn_regular='fonts/ClashDisplay-Regular.ttf')
+LabelBase.register(name='Consolas Regular', fn_regular='fonts/consola.ttf')
     
 if __name__ == '__main__':
     finnyApp().run()
