@@ -1,5 +1,5 @@
 MainMenuLayout:
-
+    
 <MainMenuLayout>:
     orientation: "vertical"
     padding: 48, 38, 48, 0
@@ -29,13 +29,12 @@ MainMenuLayout:
             size: 248, 245
             pos: 437, 39
     
-    
     BoxLayout:
         size_hint: None, None
         size: 117, 57
         Image:
             source: "finny-logo_white.png"
-    
+        
     RelativeLayout:
         Label:
             markup: True
@@ -44,6 +43,9 @@ MainMenuLayout:
             pos: 260, -440
             font_size: "18dp"
             font_name: "Consolas Regular"
+        
+        KeyboardListener:
+            text: "MainMenu"
     
     BoxLayout:
         
