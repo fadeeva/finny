@@ -13,10 +13,9 @@ from kivy.uix.anchorlayout import AnchorLayout
 
 from kivy.core.text import LabelBase
 
-import re
+import helpers
 
 class KeyboardListener(Widget):
-
     def __init__(self, **kwargs):
         super(KeyboardListener, self).__init__(**kwargs)
         self._keyboard = Window.request_keyboard(self._keyboard_closed, self, 'text')
@@ -28,40 +27,27 @@ class KeyboardListener(Widget):
         self._keyboard = None
 
     def _on_keyboard_down(self, keyboard, keycode, text, modifiers):
-        print(self.text)
-
+        helpers.get_cmnd_name(self.text, keycode)
         return True
-    
-    def get_cmnd_name(cmnd):
-        pass
-
 
 class CashFlowLayout(BoxLayout):
     pass
 
 class MainMenuLayout(BoxLayout):
     def on_button_click(self, widget):
-        print(clean_text(widget.text))
-
-
-def clean_text(dirty):
-    dirty = dirty.replace('[/font]', '')
-    dirty = dirty.replace('\n', ' ')
-    dirty = re.sub(r'\[font=fonts\/[a-zA-Z0-9_-]*\]', '', dirty)
-    return dirty.lower()
+        print(helpers.clean_text(widget.text))
 
 class PV(RelativeLayout):
     def on_button_click(self, widget):
-        print(clean_text(widget.text))
+        print(helpers.clean_text(widget.text))
     
 class FV(RelativeLayout):
     def on_button_click(self, widget):
-        print(clean_text(widget.text))
+        print(helpers.clean_text(widget.text))
 
 class EARAPR(RelativeLayout):
     def on_button_click(self, widget):
-        print(clean_text(widget.text))
-
+        print(helpers.clean_text(widget.text))
 
 class TextAndLabel(BoxLayout):
     pass
