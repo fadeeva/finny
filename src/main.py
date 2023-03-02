@@ -25,8 +25,9 @@ class KeyboardListener(Widget):
         print('Keyboard have been closed!')
         self._keyboard.unbind(on_key_down=self._on_keyboard_down)
         self._keyboard = None
-
+    
     def _on_keyboard_down(self, keyboard, keycode, text, modifiers):
+        if text == 'q': keyboard.window.close()
         helpers.get_cmnd_name(self.text, keycode)
         return True
 
@@ -57,6 +58,10 @@ class finnyApp(App):
         Window.clearcolor = (.06, .05, .1, 1)
         Window.size = (685, 710)
         return MainMenuLayout()
+    
+#    def close_app(self):
+#        App.get_running_app().stop()
+#        Window.close()
     
     def add_textbox(self):
             self.root.ids.ti_box.add_widget(TextAndLabel())

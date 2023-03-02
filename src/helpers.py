@@ -10,23 +10,28 @@ COMMANDS = {
     'f'   : [],
     'o'   : [],
     'm'   : [],
-    'ignore_keycode' : [300, 301, 303, 304, 305, 306] # numlock, rshift, rctrl, lshift, rshift
+    'ignore_keycode' : [300, 301, 303, 304, 305, 306], # numlock, rshift, rctrl, lshift, rshift
+    'enter': 13
 }
 
 ## NEED add enter after each command
 full_cmnd = []
 def get_cmnd_name(screen_name, cmnd):
     if screen_name in COMMANDS.keys() and cmnd[0] not in COMMANDS['ignore_keycode']:
-        if cmnd[0] == 13 : full_cmnd.clear()
-        full_cmnd.append(cmnd[1])
-        
-        ans = [''.join(full_cmnd)]
-        if ans[0] in COMMANDS[screen_name]:
-            ans.append('Yes')
+        if cmnd[0] == COMMANDS['enter']:
+            full_cmnd.clear()
         else:
-            ans.append('No')
+            full_cmnd.append(cmnd[1])
+            print(''.join(full_cmnd))
+        
+        
+            #        ans = [''.join(full_cmnd)]
+#        if ans[0] in COMMANDS[screen_name]:
+#            ans.append('Yes')
+#        else:
+#            ans.append('No')
             
-    print(ans)
+#    print(ans)
 
 def clean_text(dirty):
     dirty = dirty.replace('[/font]', '')
