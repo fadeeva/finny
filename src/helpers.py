@@ -2,14 +2,14 @@ import re
 
 COMMANDS = {
     'main_menu' : ['si', 'sp', 'cf', 'pm', 'c', 'f', 'o', 'm'],
-    'si'  : [],
-    'sp'  : [],
-    'cf'  : [],
-    'pm'  : [],
-    'c' : [],
-    'f'   : [],
-    'o'   : [],
-    'm'   : [],
+    'si' : [],
+    'sp' : [],
+    'cf' : [],
+    'pm' : [],
+    'c'  : [],
+    'f'  : [],
+    'o'  : [],
+    'm'  : [],
     'ignore_keycode' : [300, 301, 303, 304, 305, 306], # numlock, rshift, rctrl, lshift, rshift
     'enter': 13
 }

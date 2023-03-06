@@ -31,12 +31,35 @@ class KeyboardListener(Widget):
         helpers.get_cmnd_name(self.text, keycode)
         return True
 
-class CashFlowLayout(BoxLayout):
-    pass
 
 class MainMenuLayout(BoxLayout):
     def on_button_click(self, widget):
         print(helpers.clean_text(widget.text))
+
+class StockInfoLayout(BoxLayout):
+    pass
+
+class StockProfitLayout(BoxLayout):
+    pass
+
+class CashFlowLayout(BoxLayout):
+    pass
+
+class PortfolioManagemntLayout(BoxLayout):
+    pass
+
+class CFDLayout(BoxLayout):
+    pass
+
+class FuturesLayout(BoxLayout):
+    pass
+
+class OptionsLayout(BoxLayout):
+    pass
+
+class MultipliersLayout(BoxLayout):
+    pass
+
 
 class PV(RelativeLayout):
     def on_button_click(self, widget):
@@ -57,7 +80,7 @@ class finnyApp(App):
     def build(self):
         Window.clearcolor = (.06, .05, .1, 1)
         Window.size = (685, 710)
-        return MainMenuLayout()
+        return StockInfoLayout()
     
 #    def close_app(self):
 #        App.get_running_app().stop()

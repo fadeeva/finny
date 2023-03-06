@@ -1,5 +1,48 @@
-MainMenuLayout:
+StockInfoLayout:
+
+<StockInfoLayout>:
+    orientation: "vertical"
+    padding: 48, 38, 48, 0
     
+    canvas:
+        Color:
+            rgba: (239/255,231/255,223/255,1)
+        Rectangle:
+            size: 685, 40
+            pos: 0, 0
+    
+    BoxLayout:
+        size_hint: None, None
+        size: 117, 57
+        
+        Image:
+            source: "finny-logo_white.png"
+            pos: 0, 0
+    
+    RelativeLayout:
+        Label:
+            markup: True
+            text: "[font=fonts/consolab]q[/font] - Close"
+            color: .06, .05, .1, 1
+            pos: 260, -287
+            font_size: "18dp"
+            font_name: "Consolas Regular"
+        
+        Label:
+            markup: True
+            text: "[font=fonts/consolab]esc[/font] - MainMenu"
+            color: .06, .05, .1, 1
+            pos: 120, -287
+            font_size: "18dp"
+            font_name: "Consolas Regular"
+
+<StockProfitLayout>:
+<PortfolioManagementLayout>:
+<CFDLayout>:
+<FuturesLayout>:
+<OptionsLayout>:
+<MultipliersLayout>:
+
 <MainMenuLayout>:
     orientation: "vertical"
     padding: 48, 38, 48, 0
