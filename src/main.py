@@ -45,7 +45,7 @@ class StockProfitLayout(BoxLayout):
 class CashFlowLayout(BoxLayout):
     pass
 
-class PortfolioManagemntLayout(BoxLayout):
+class PortfolioManagementLayout(BoxLayout):
     pass
 
 class CFDLayout(BoxLayout):
@@ -80,7 +80,7 @@ class finnyApp(App):
     def build(self):
         Window.clearcolor = (.06, .05, .1, 1)
         Window.size = (685, 710)
-        return StockInfoLayout()
+        return CashFlowLayout()
     
 #    def close_app(self):
 #        App.get_running_app().stop()
