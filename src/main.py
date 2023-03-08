@@ -13,6 +13,9 @@ from kivy.uix.anchorlayout import AnchorLayout
 
 from kivy.core.text import LabelBase
 
+from kivy.lang import Builder
+from kivy.uix.screenmanager import ScreenManager, Screen
+
 import helpers
 
 class KeyboardListener(Widget):
@@ -30,6 +33,7 @@ class KeyboardListener(Widget):
         if text == 'q': keyboard.window.close()
         helpers.get_cmnd_name(self.text, keycode)
         return True
+
 
 
 class MainMenuLayout(BoxLayout):
@@ -76,11 +80,15 @@ class EARAPR(RelativeLayout):
 class TextAndLabel(BoxLayout):
     pass
 
+class WindowManager(ScreenManager):
+    pass
+
+kv = Builder.load_file("finny.kv")
 class finnyApp(App):
     def build(self):
         Window.clearcolor = (.06, .05, .1, 1)
         Window.size = (685, 710)
-        return CashFlowLayout()
+        return kv
     
 #    def close_app(self):
 #        App.get_running_app().stop()
