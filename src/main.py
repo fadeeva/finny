@@ -34,34 +34,32 @@ class KeyboardListener(Widget):
         helpers.get_cmnd_name(self.text, keycode)
         return True
 
-
-
-class MainMenuLayout(BoxLayout):
+class MainMenuLayout(Screen):
     def on_button_click(self, widget):
         print(helpers.clean_text(widget.text))
 
-class StockInfoLayout(BoxLayout):
+class StockInfoLayout(Screen):
     pass
 
-class StockProfitLayout(BoxLayout):
+class StockProfitLayout(Screen):
     pass
 
-class CashFlowLayout(BoxLayout):
+class CashFlowLayout(Screen):
     pass
 
-class PortfolioManagementLayout(BoxLayout):
+class PortfolioManagementLayout(Screen):
     pass
 
-class CFDLayout(BoxLayout):
+class CFDLayout(Screen):
     pass
 
-class FuturesLayout(BoxLayout):
+class FuturesLayout(Screen):
     pass
 
-class OptionsLayout(BoxLayout):
+class OptionsLayout(Screen):
     pass
 
-class MultipliersLayout(BoxLayout):
+class MultipliersLayout(Screen):
     pass
 
 

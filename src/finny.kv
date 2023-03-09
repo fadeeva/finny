@@ -1,4 +1,14 @@
-StockProfitLayout:
+WindowManager:
+    MainMenuLayout:
+    StockInfoLayout:
+    StockProfitLayout:
+    CashFlowLayout:
+    PortfolioManagementLayout:
+    FuturesLayout:
+    CFDLayout:
+    FuturesLayout:
+    OptionsLayout:
+    MultipliersLayout:
 
 #:set red    (249/255,73/255,38/255,1)
 #:set white  (239/255,231/255,223/255,1)
@@ -7,6 +17,8 @@ StockProfitLayout:
 #:set black  .06, .05, .1, 1
 
 <MultipliersLayout>:
+    name: "multipliers"
+    
     orientation: "vertical"
     padding: 48, 38, 48, 0
     
@@ -51,6 +63,8 @@ StockProfitLayout:
             font_name: "ClashDisplay Regular"
 
 <OptionsLayout>:
+    name: "options"
+    
     orientation: "vertical"
     padding: 48, 38, 48, 0
     
@@ -95,6 +109,8 @@ StockProfitLayout:
             font_name: "ClashDisplay Regular"
 
 <FuturesLayout>:
+    name: "futures"
+    
     orientation: "vertical"
     padding: 48, 38, 48, 0
     
@@ -139,6 +155,8 @@ StockProfitLayout:
             font_name: "ClashDisplay Regular"
 
 <CFDLayout>:
+    name: "cfd"
+    
     orientation: "vertical"
     padding: 48, 38, 48, 0
     
@@ -183,6 +201,8 @@ StockProfitLayout:
             font_name: "ClashDisplay Regular"
 
 <PortfolioManagementLayout>:
+    name: "portfolio_management"
+    
     orientation: "vertical"
     padding: 48, 38, 48, 0
     
@@ -227,6 +247,8 @@ StockProfitLayout:
             font_name: "ClashDisplay Regular"
 
 <StockProfitLayout>:
+    name: "stock_profit"
+    
     orientation: "vertical"
     padding: 48, 38, 48, 0
     
@@ -271,6 +293,8 @@ StockProfitLayout:
             font_name: "ClashDisplay Regular"
 
 <StockInfoLayout>:
+    name: "stock_info"
+    
     orientation: "vertical"
     padding: 48, 38, 48, 0
     
@@ -315,6 +339,8 @@ StockProfitLayout:
             font_name: "ClashDisplay Regular"
 
 <MainMenuLayout>:
+    name: "main_menu"
+    
     orientation: "vertical"
     padding: 48, 38, 48, 0
     
@@ -346,8 +372,10 @@ StockProfitLayout:
     BoxLayout:
         size_hint: None, None
         size: 117, 57
+        pos: 48, 620
         Image:
             source: "finny-logo_white.png"
+            
         
     RelativeLayout:
         Label:
@@ -377,8 +405,12 @@ StockProfitLayout:
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
 
-                on_press: root.on_button_click(self)
-
+                # on_press: root.on_button_click(self)
+                
+                on_release:
+                    app.root.current = "stock_info"
+                    root.manager.transition.direction = "left"
+                
                 background_color: (0,0,0,0)
                 background_normal: ''
 
@@ -557,6 +589,8 @@ StockProfitLayout:
 
 
 <CashFlowLayout>:
+    name: "cash_flow"
+    
     padding: 48
     orientation: "vertical"
     
