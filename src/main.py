@@ -18,9 +18,9 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 
 import helpers
 
-class KeyboardListener(Widget):
+class MainMenuLayout(Screen):
     def __init__(self, **kwargs):
-        super(KeyboardListener, self).__init__(**kwargs)
+        super(MainMenuLayout, self).__init__(**kwargs)
         self._keyboard = Window.request_keyboard(self._keyboard_closed, self, 'text')
         self._keyboard.bind(on_key_down=self._on_keyboard_down)
 
@@ -30,13 +30,15 @@ class KeyboardListener(Widget):
         self._keyboard = None
     
     def _on_keyboard_down(self, keyboard, keycode, text, modifiers):
-        if text == 'q': keyboard.window.close()
-        helpers.get_cmnd_name(self.text, keycode)
+        #if text == 'q': keyboard.window.close()
+        self.manager.current='stock_profit'
+        #helpers.get_cmnd_name(self.name, keycode)
         return True
 
-class MainMenuLayout(Screen):
     def on_button_click(self, widget):
         print(helpers.clean_text(widget.text))
+    
+
 
 class StockInfoLayout(Screen):
     pass
@@ -86,7 +88,20 @@ class finnyApp(App):
     def build(self):
         Window.clearcolor = (.06, .05, .1, 1)
         Window.size = (685, 710)
-        return kv
+        
+        wm = WindowManager()
+        wm.add_widget(MainMenuLayout(name='main_menu'))
+        wm.add_widget(StockInfoLayout(name='stock_info'))
+        wm.add_widget(StockProfitLayout(name='stock_profit'))
+        wm.add_widget(CashFlowLayout(name='cash_flow'))
+        wm.add_widget(PortfolioManagementLayout(name='portfolio_management'))
+        wm.add_widget(FuturesLayout(name='futures'))
+        wm.add_widget(CFDLayout(name='cfd'))
+        wm.add_widget(OptionsLayout(name='options'))
+        wm.add_widget(MultipliersLayout(name='multipliers'))
+        
+        
+        return wm
     
 #    def close_app(self):
 #        App.get_running_app().stop()

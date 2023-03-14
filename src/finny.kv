@@ -370,9 +370,6 @@ WindowManager:
             pos: 260, -338
             font_size: "18dp"
             font_name: "Consolas Regular"
-        
-        KeyboardListener:
-            text: "main_menu"
     
     BoxLayout:
         
@@ -394,7 +391,7 @@ WindowManager:
                 
                 on_release:
                     app.root.current = "stock_info"
-                    root.manager.transition.direction = "left"
+                    root.manager.transition.direction = "right"
                 
                 background_color: (0,0,0,0)
                 background_normal: ''
