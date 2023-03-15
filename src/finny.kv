@@ -415,8 +415,12 @@ WindowManager:
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
 
-                on_press: root.on_button_click(self)
-
+                #on_press: root.on_button_click(self)
+                
+                on_release:
+                    app.root.current = "stock_profit"
+                    root.manager.transition.direction = "right"
+                
                 background_color: (0,0,0,0)
                 background_normal: ''
 
@@ -438,8 +442,12 @@ WindowManager:
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
 
-                on_press: root.on_button_click(self)
-
+                #on_press: root.on_button_click(self)
+                
+                on_release:
+                    app.root.current = "cash_flow"
+                    root.manager.transition.direction = "right"
+                
                 background_color: (0,0,0,0)
                 background_normal: ''
 
@@ -462,8 +470,12 @@ WindowManager:
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
 
-                on_press: root.on_button_click(self)
-
+                #on_press: root.on_button_click(self)
+                
+                on_release:
+                    app.root.current = "portfolio_management"
+                    root.manager.transition.direction = "right"
+                
                 background_color: (0,0,0,0)
                 background_normal: ''
 
@@ -485,7 +497,11 @@ WindowManager:
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
 
-                on_press: root.on_button_click(self)
+                #on_press: root.on_button_click(self)
+
+                on_release:
+                    app.root.current = "futures"
+                    root.manager.transition.direction = "right"
 
                 background_color: (0,0,0,0)
                 background_normal: ''
@@ -508,8 +524,12 @@ WindowManager:
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
 
-                on_press: root.on_button_click(self)
-
+                #on_press: root.on_button_click(self)
+                
+                on_release:
+                    app.root.current = "multipliers"
+                    root.manager.transition.direction = "right"
+                
                 background_color: (0,0,0,0)
                 background_normal: ''
 
@@ -531,8 +551,12 @@ WindowManager:
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
 
-                on_press: root.on_button_click(self)
-
+                #on_press: root.on_button_click(self)
+                
+                on_release:
+                    app.root.current = "options"
+                    root.manager.transition.direction = "right"
+                
                 background_color: (0,0,0,0)
                 background_normal: ''
 
@@ -554,8 +578,12 @@ WindowManager:
                 font_name: "ClashDisplay Regular"
                 font_size: "24dp"
 
-                on_press: root.on_button_click(self)
-
+                #on_press: root.on_button_click(self)
+                
+                on_release:
+                    app.root.current = "cfd"
+                    root.manager.transition.direction = "right"
+                
                 background_color: (0,0,0,0)
                 background_normal: ''
 

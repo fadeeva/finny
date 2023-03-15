@@ -30,9 +30,12 @@ class MainMenuLayout(Screen):
         self._keyboard = None
     
     def _on_keyboard_down(self, keyboard, keycode, text, modifiers):
-        #if text == 'q': keyboard.window.close()
-        self.manager.current='stock_profit'
-        #helpers.get_cmnd_name(self.name, keycode)
+        if text == 'q': keyboard.window.close()
+        if keycode[0] == 27: self.manager.current='main_menu'
+        screen_name = helpers.get_cmnd_name(keycode)
+        if screen_name:
+            self.manager.current = screen_name
+        
         return True
 
     def on_button_click(self, widget):
@@ -99,13 +102,8 @@ class finnyApp(App):
         wm.add_widget(CFDLayout(name='cfd'))
         wm.add_widget(OptionsLayout(name='options'))
         wm.add_widget(MultipliersLayout(name='multipliers'))
-        
-        
+           
         return wm
-    
-#    def close_app(self):
-#        App.get_running_app().stop()
-#        Window.close()
     
     def add_textbox(self):
             self.root.ids.ti_box.add_widget(TextAndLabel())

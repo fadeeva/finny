@@ -1,37 +1,30 @@
 import re
 
 COMMANDS = {
-    'main_menu' : ['si', 'sp', 'cf', 'pm', 'c', 'f', 'o', 'm'],
-    'si' : [],
-    'sp' : [],
-    'cf' : [],
-    'pm' : [],
-    'c'  : [],
-    'f'  : [],
-    'o'  : [],
-    'm'  : [],
-    'ignore_keycode' : [300, 301, 303, 304, 305, 306], # numlock, rshift, rctrl, lshift, rshift
+    'si' : 'stock_info',
+    'sp' : 'stock_profit',
+    'cf' : 'cash_flow',
+    'pm' : 'portfolio_management',
+    'c'  : 'cfd',
+    'f'  : 'futures',
+    'o'  : 'options',
+    'm'  : 'multipliers',
+    'ignore_keycode' : [300, 301, 303, 304, 305, 306, 27], # numlock, rshift, rctrl, lshift, rshift, escape(?)
     'enter': 13
 }
 
-## NEED add enter after each command
 full_cmnd = []
-def get_cmnd_name(screen_name, cmnd):
-    if screen_name in COMMANDS.keys() and cmnd[0] not in COMMANDS['ignore_keycode']:
+def get_cmnd_name(cmnd):
+    if cmnd[0] not in COMMANDS['ignore_keycode']:
         if cmnd[0] == COMMANDS['enter']:
+            curr_cmnd = ''.join(full_cmnd)
+            if curr_cmnd in COMMANDS.keys():
+                full_cmnd.clear()
+                return COMMANDS[curr_cmnd]
             full_cmnd.clear()
         else:
             full_cmnd.append(cmnd[1])
-            print(''.join(full_cmnd))
-        
-        
-            #        ans = [''.join(full_cmnd)]
-#        if ans[0] in COMMANDS[screen_name]:
-#            ans.append('Yes')
-#        else:
-#            ans.append('No')
-            
-#    print(ans)
+
 
 def clean_text(dirty):
     dirty = dirty.replace('[/font]', '')
