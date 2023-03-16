@@ -93,8 +93,9 @@ class finnyApp(App):
         Window.size = (685, 710)
         
         wm = WindowManager()
-        wm.add_widget(MainMenuLayout(name='main_menu'))
         wm.add_widget(StockInfoLayout(name='stock_info'))
+        wm.add_widget(MainMenuLayout(name='main_menu'))
+        
         wm.add_widget(StockProfitLayout(name='stock_profit'))
         wm.add_widget(CashFlowLayout(name='cash_flow'))
         wm.add_widget(PortfolioManagementLayout(name='portfolio_management'))
