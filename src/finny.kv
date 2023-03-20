@@ -311,6 +311,18 @@ WindowManager:
             Rectangle:
                 size: 170, 9
                 pos: 170, 546
+            
+            Color:
+                rgba: green
+            Rectangle:
+                size: 9, 60
+                pos: 385, 520
+            Line:
+                points: (385, 520, 455, 520)
+                width: 1
+            Line:
+                points: (385, 580, 455, 580)
+                width: 1
         
         Label:
             markup: True
@@ -340,7 +352,37 @@ WindowManager:
             font_size: "39dp"
             font_name: "ClashDisplay Regular"
             #on_text_validate: root.on_text_validate(self)
-   
+        
+    RelativeLayout:    
+        Label:
+            markup: True
+            text: "Moving\nAverage"
+            line_height: .8
+            color: white
+            size_hint: None, None
+            pos: 40, 465
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]50[/font]DAY\n[font=fonts/ClashDisplay-Semibold]200[/font]DAY"
+            line_height: .8
+            color: yellow
+            size_hint: None, None
+            pos: 158, 461
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "46.89\n43.74"
+            line_height: .8
+            color: white
+            size_hint: None, None
+            pos: 264, 464
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
    
    
    
