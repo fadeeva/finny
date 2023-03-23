@@ -310,18 +310,18 @@ WindowManager:
             
             Rectangle:
                 size: 170, 9
-                pos: 155, 546
+                pos: 150, 546
             
             Color:
                 rgba: green
             Rectangle:
                 size: 9, 60
-                pos: 370, 520
+                pos: 367, 520
             Line:
-                points: (370, 520, 450, 520)
+                points: (367, 520, 447, 520)
                 width: 1
             Line:
-                points: (370, 580, 450, 580)
+                points: (367, 580, 447, 580)
                 width: 1
         
         Label:
@@ -336,7 +336,8 @@ WindowManager:
             markup: True
             text: "ticker"
             color: yellow
-            pos: -224, 200
+            size_hint: None, None
+            pos: 65, 505
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
         
@@ -344,7 +345,7 @@ WindowManager:
             id: my_text_input
             size_hint: None, None
             size: 170, 50
-            pos: 155, 555
+            pos: 150, 555
             text: "BK"
             foreground_color: yellow
             background_color: black
@@ -370,7 +371,7 @@ WindowManager:
             line_height: .8
             color: yellow
             size_hint: None, None
-            pos: 143, 461
+            pos: 138, 461
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
         
@@ -380,7 +381,7 @@ WindowManager:
             line_height: .8
             color: white
             size_hint: None, None
-            pos: 249, 464
+            pos: 244, 464
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
         
@@ -390,7 +391,7 @@ WindowManager:
             line_height: .8
             color: white
             size_hint: None, None
-            pos: 373, 500
+            pos: 365, 500
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
         
@@ -400,7 +401,7 @@ WindowManager:
             line_height: 4
             color: green
             size_hint: None, None
-            pos: 375, 500
+            pos: 373, 500
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
         
@@ -410,7 +411,7 @@ WindowManager:
             line_height: 4
             color: yellow
             size_hint: None, None
-            pos: 465, 510
+            pos: 455, 510
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
         
@@ -420,7 +421,7 @@ WindowManager:
             line_height: 4
             color: yellow
             size_hint: None, None
-            pos: 485, 492
+            pos: 475, 492
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
    
@@ -435,7 +436,7 @@ WindowManager:
                 size: 9, 136
                 pos: 180, 288
             Line:
-                points: (135, 423, 180, 423)
+                points: (110, 423, 180, 423) #70
                 width: 1
             Line:
                 points: (55, 384, 175, 384)
@@ -444,30 +445,65 @@ WindowManager:
                 points: (55, 296, 175, 296)
                 width: 1
             Line:
-                points: (135, 289, 180, 289)
+                points: (110, 289, 180, 289)
                 width: 1
             
             Color:
                 rgba: green
             Rectangle:
                 size: 38, 130
-                pos: 210, 280
+                pos: 230, 280
             Rectangle:
                 size: 9, 161
-                pos: 225, 263
+                pos: 245, 263
             Line:
-                points: (234, 423, 294, 423)
+                points: (254, 423, 324, 423)
                 width: 1
             Line:
-                points: (234, 409, 424, 409)
+                points: (254, 409, 450, 409)
                 width: 1
             Line:
-                points: (234, 281, 344, 281)
+                points: (254, 281, 364, 281)
                 width: 1
             Line:
-                points: (234, 264, 294, 264)
+                points: (254, 264, 324, 264)
                 width: 1
+            
+        Label:
+            markup: True
+            text: "50.74"
+            color: red
+            size_hint: None, None
+            pos: 84, 384
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
         
+        Label:
+            markup: True
+            text: "50.52"
+            color: red
+            size_hint: None, None
+            pos: 28, 344
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "50.04"
+            color: red
+            size_hint: None, None
+            pos: 30, 256
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "49.91"
+            color: red
+            size_hint: None, None
+            pos: 80, 229
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
    
     RelativeLayout:
         Label:
