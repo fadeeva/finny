@@ -424,7 +424,30 @@ WindowManager:
             pos: 475, 492
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
-   
+    
+    RelativeLayout:    
+        Label:
+            markup: True
+            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Shares Short[/color]\n2.79M"
+            #line_height: .8
+            halign: 'right'
+            color: white
+            size_hint: None, None
+            pos: 550, 380
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Short Ratio[/color]\n0.59"
+            #line_height: .8
+            halign: 'right'
+            color: white
+            size_hint: None, None
+            pos: 550, 300
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+    
     RelativeLayout:
         canvas.before:
             Color:
@@ -463,7 +486,7 @@ WindowManager:
                 points: (254, 409, 450, 409)
                 width: 1
             Line:
-                points: (254, 281, 364, 281)
+                points: (254, 281, 374, 281)
                 width: 1
             Line:
                 points: (254, 264, 324, 264)
@@ -502,6 +525,42 @@ WindowManager:
             color: red
             size_hint: None, None
             pos: 80, 229
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
+            
+        Label:
+            markup: True
+            text: "50.74"
+            color: green
+            size_hint: None, None
+            pos: 249, 384
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
+            
+        Label:
+            markup: True
+            text: "50.23"
+            color: white
+            size_hint: None, None
+            pos: 353, 376
+            font_size: "34dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "49.89"
+            color: green
+            size_hint: None, None
+            pos: 300, 242
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "49.78"
+            color: green
+            size_hint: None, None
+            pos: 249, 204
             font_size: "16dp"
             font_name: "ClashDisplay Regular"
    
