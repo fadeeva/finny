@@ -426,9 +426,13 @@ WindowManager:
             font_name: "ClashDisplay Regular"
     
     RelativeLayout:    
+        
+        size_hint: None, None
+        pos: 0, 0
+        
         Label:
             markup: True
-            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Shares Short[/color]\n2.79M"
+            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Shares Short[/color]\n2 .79M"
             #line_height: .8
             halign: 'right'
             color: white
@@ -439,12 +443,146 @@ WindowManager:
         
         Label:
             markup: True
-            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Short Ratio[/color]\n0.59"
+            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Short Ratio[/color]\n0 .59"
             #line_height: .8
             halign: 'right'
             color: white
             size_hint: None, None
-            pos: 550, 300
+            pos: 556, 300
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Short % of Float[/color]\n0 .34%"
+            #line_height: .8
+            halign: 'right'
+            color: white
+            size_hint: None, None
+            pos: 542, 220
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Short % of Shares Outstanding[/color]\n0 .34%"
+            #line_height: .8
+            halign: 'right'
+            color: white
+            size_hint: None, None
+            pos: 495, 140
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "[color=1D1D2B]Jan 12, 2023[/color]\n[color=F7CE26]Short Short[/color]\n3 .85M"
+            #line_height: .8
+            halign: 'right'
+            color: white
+            size_hint: None, None
+            pos: 557, 60
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+    
+    RelativeLayout:    
+        size_hint: None, None
+        pos: 0, 0
+        
+        #canvas.before:
+         #   Color:
+          #      rgba: red
+           # Line:
+            #    points: (110, 423, 180, 423) #70
+             #   width: 1
+        
+        Label:
+            markup: True
+            text: "Avg Vol"
+            color: yellow
+            size_hint: None, None
+            pos: 30, 120
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+            
+        Label:
+            markup: True
+            text: "3 month"
+            color: white
+            size_hint: None, None
+            pos: 100, 130
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "5 .12M"
+            color: white
+            size_hint: None, None
+            pos: 160, 130
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "10 day"
+            color: white
+            size_hint: None, None
+            pos: 90, 110
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "5 .65M"
+            color: white
+            size_hint: None, None
+            pos: 164, 110
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "Held by"
+            color: yellow
+            size_hint: None, None
+            pos: 28, 40
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+            
+        Label:
+            markup: True
+            text: "Insiders"
+            color: white
+            size_hint: None, None
+            pos: 95, 50
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "0 .17%"
+            color: white
+            size_hint: None, None
+            pos: 176, 50
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "Institutions"
+            color: white
+            size_hint: None, None
+            pos: 105, 30
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "85 .63%"
+            color: white
+            size_hint: None, None
+            pos: 184, 30
             font_size: "14dp"
             font_name: "ClashDisplay Regular"
     
