@@ -14,6 +14,7 @@ WindowManager:
 #:set white  (239/255,231/255,223/255,1)
 #:set yellow (247/255,206/255,38/255,1)
 #:set green  (34/255,160/255,61/255,1)
+#:set grey   (29/255,29/255,43/255,1)
 #:set black  .06, .05, .1, 1
 
 <MultipliersLayout>:
@@ -238,7 +239,6 @@ WindowManager:
 
 <StockProfitLayout>:
     name: "stock_profit"
-    
     orientation: "vertical"
     
     canvas:
@@ -254,6 +254,54 @@ WindowManager:
         pos: 54, 598
         Image:
             source: "finny-logo_green.png"
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 0, 0
+        
+        canvas.before:
+            Color:
+                rgba: white
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 170, 9
+                pos: 150, 546
+        
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]P[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "stock\nprice"
+            color: white
+            line_height: .8
+            size_hint: None, None
+            pos: 65, 510
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 150, 555
+            text: "134.79"
+            foreground_color: white
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
     
     RelativeLayout:
         Label:
@@ -489,19 +537,22 @@ WindowManager:
         size_hint: None, None
         pos: 0, 0
         
-        #canvas.before:
-         #   Color:
-          #      rgba: red
-           # Line:
-            #    points: (110, 423, 180, 423) #70
-             #   width: 1
+        canvas.before:
+            Color:
+                rgba: grey
+            Line:
+                points: (50, 120, 325, 120) #70
+                width: 1
+            Line:
+                points: (50, 180, 325, 180) #70
+                width: 1
         
         Label:
             markup: True
             text: "Avg Vol"
             color: yellow
             size_hint: None, None
-            pos: 30, 120
+            pos: 30, 100
             font_size: "14dp"
             font_name: "ClashDisplay Regular"
             
@@ -510,7 +561,7 @@ WindowManager:
             text: "3 month"
             color: white
             size_hint: None, None
-            pos: 100, 130
+            pos: 100, 110
             font_size: "14dp"
             font_name: "ClashDisplay Regular"
         
@@ -519,7 +570,7 @@ WindowManager:
             text: "5 .12M"
             color: white
             size_hint: None, None
-            pos: 160, 130
+            pos: 160, 110
             font_size: "14dp"
             font_name: "ClashDisplay Regular"
         
@@ -528,7 +579,7 @@ WindowManager:
             text: "10 day"
             color: white
             size_hint: None, None
-            pos: 90, 110
+            pos: 90, 90
             font_size: "14dp"
             font_name: "ClashDisplay Regular"
         
@@ -537,7 +588,7 @@ WindowManager:
             text: "5 .65M"
             color: white
             size_hint: None, None
-            pos: 164, 110
+            pos: 164, 90
             font_size: "14dp"
             font_name: "ClashDisplay Regular"
         
