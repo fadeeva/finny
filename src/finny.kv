@@ -250,7 +250,7 @@ WindowManager:
     
     BoxLayout:
         size_hint: None, None
-        size: 117, 57
+        size: 117, 97
         pos: 54, 598
         Image:
             source: "finny-logo_green.png"
@@ -271,6 +271,12 @@ WindowManager:
             Rectangle:
                 size: 170, 9
                 pos: 150, 546
+                
+            Color:
+                rgba: grey
+            Line:
+                points: (50, 520, 320, 520)
+                width: 1
         
         Label:
             markup: True
@@ -302,6 +308,72 @@ WindowManager:
             font_size: "39dp"
             font_name: "ClashDisplay Regular"
             #on_text_validate: root.on_text_validate(self)
+        
+        Label:
+            markup: True
+            text: "$"
+            color: white
+            size_hint: None, None
+            pos: 264, 520
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 0, 0
+        
+        canvas.before:    
+            Color:
+                rgba: green
+            RoundedRectangle:
+                size: 30, 30
+                pos: 155, 465
+                radius: [6]
+                
+            Color:
+                rgba: red
+            RoundedRectangle:
+                size: 30, 30
+                pos: 188, 465
+                radius: [6]
+                
+        Label:
+            markup: True
+            text: "buy"
+            color: green
+            size_hint: None, None
+            pos: 82, 425
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+            
+        Label:
+            markup: True
+            text: u"[font=fonts/consolab]\u2191[/font]"
+            color: black
+            size_hint: None, None
+            pos: 120, 430
+            font_size: "23dp"
+            font_name: "Consolas Regular"
+            
+        Label:
+            markup: True
+            text: u"[font=fonts/consolab]\u2193[/font]"
+            color: black
+            size_hint: None, None
+            pos: 153, 430
+            font_size: "23dp"
+            font_name: "Consolas Regular"    
+        
+        Label:
+            markup: True
+            text: "sell"
+            color: red
+            size_hint: None, None
+            pos: 189, 425
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+    
     
     RelativeLayout:
         Label:
