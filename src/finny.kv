@@ -328,22 +328,63 @@ WindowManager:
                 rgba: green
             RoundedRectangle:
                 size: 30, 30
-                pos: 155, 465
+                pos: 155, 467
                 radius: [6]
                 
             Color:
                 rgba: red
             RoundedRectangle:
                 size: 30, 30
-                pos: 188, 465
+                pos: 188, 467
                 radius: [6]
+            
+            Color:
+                rgba: green
+            Rectangle:
+                size: 270, 9
+                pos: 50, 445
+            
+            Color:
+                rgba: green
+            Line:
+                points: (118, 445, 118, 410)
+            
+            Line:
+                points: (118, 388, 118, 353) # arrow
+            Line:
+                points: (108, 363, 118, 353) # arrow
+            Line:
+                points: (118, 353, 128, 363) # arrow
+            
+            Line:
+                points: (118, 320, 118, 305)
+            Line:
+                points: (50, 200, 185, 200)
+            
+                
+            Color:
+                rgba: red
+            Line:
+                points: (248, 445, 248, 410)
+            
+            Line:
+                points: (248, 388, 248, 353) # arrow
+            Line:
+                points: (238, 363, 248, 353) # arrow
+            Line:
+                points: (248, 353, 258, 363) # arrow
+            
+            Line:
+                points: (248, 320, 248, 305)
+            Line:
+                points: (185, 200, 320, 200)
                 
         Label:
             markup: True
             text: "buy"
             color: green
             size_hint: None, None
-            pos: 82, 425
+            pos: 82, 427
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
             
@@ -352,7 +393,7 @@ WindowManager:
             text: u"[font=fonts/consolab]\u2191[/font]"
             color: black
             size_hint: None, None
-            pos: 120, 430
+            pos: 121, 430
             font_size: "23dp"
             font_name: "Consolas Regular"
             
@@ -370,7 +411,7 @@ WindowManager:
             text: "sell"
             color: red
             size_hint: None, None
-            pos: 189, 425
+            pos: 189, 427
             font_size: "18dp"
             font_name: "ClashDisplay Regular"
     
