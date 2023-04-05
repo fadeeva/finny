@@ -321,6 +321,346 @@ WindowManager:
     RelativeLayout:
         orientation: "horizontal"
         size_hint: None, None
+        pos: 315, 0
+        
+        canvas.before:
+            Color:
+                rgba: green
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 170, 9
+                pos: 150, 546
+
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]O[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "own\nfunds"
+            color: green
+            line_height: .8
+            size_hint: None, None
+            pos: 65, 510
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 150, 555
+            text: "300"
+            foreground_color: green
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
+        
+        Label:
+            markup: True
+            text: "$"
+            color: green
+            size_hint: None, None
+            pos: 264, 520
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 315, -76
+        
+        canvas.before:
+            Color:
+                rgba: red
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 170, 9
+                pos: 150, 546
+
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]R[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "risk"
+            color: red
+            line_height: .8
+            size_hint: None, None
+            pos: 65, 510
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 150, 555
+            text: "5"
+            foreground_color: red
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
+        
+        Label:
+            markup: True
+            text: "%"
+            color: red
+            size_hint: None, None
+            pos: 264, 520
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 315, -148
+        
+        canvas.before:
+            Color:
+                rgba: yellow
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 170, 9
+                pos: 150, 546
+
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]S[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "stop"
+            color: yellow
+            line_height: .8
+            size_hint: None, None
+            pos: 65, 510
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 150, 555
+            text: "25"
+            foreground_color: yellow
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
+        
+        Label:
+            markup: True
+            text: "134.54"
+            color: yellow
+            size_hint: None, None
+            pos: 264, 520
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 315, -220
+        
+        canvas.before:
+            Color:
+                rgba: green
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 170, 9
+                pos: 150, 546
+
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]L[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "leverage"
+            color: green
+            line_height: .8
+            size_hint: None, None
+            pos: 65, 510
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 150, 555
+            text: "10"
+            foreground_color: green
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 315, -292
+        
+        canvas.before:
+            Color:
+                rgba: yellow
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 170, 9
+                pos: 150, 546
+
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]C[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "brokerage\ncommission"
+            color: yellow
+            line_height: .8
+            size_hint: None, None
+            pos: 65, 510
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 150, 555
+            text: "1.5"
+            foreground_color: yellow
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
+        
+        Label:
+            markup: True
+            text: "$"
+            color: yellow
+            size_hint: None, None
+            pos: 264, 520
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 315, -364
+        
+        canvas.before:
+            Color:
+                rgba: red
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 170, 9
+                pos: 150, 546
+            
+            Color:
+                rgba: grey
+            Line:
+                points: (50, 519, 320, 519)
+                width: 1
+
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]F[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "fee"
+            color: red
+            line_height: .8
+            size_hint: None, None
+            pos: 65, 510
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 150, 555
+            text: "0.025"
+            foreground_color: red
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
+        
+        Label:
+            markup: True
+            text: "%"
+            color: red
+            size_hint: None, None
+            pos: 264, 520
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+    
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
         pos: 0, 0
         
         canvas.before:    
