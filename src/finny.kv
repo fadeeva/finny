@@ -207,10 +207,163 @@ WindowManager:
     
     BoxLayout:
         size_hint: None, None
-        size: 117, 57
+        size: 117, 97
         pos: 54, 598
         Image:
             source: "finny-logo_yellow.png"
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 0, 0
+        
+        canvas.before:
+            Color:
+                rgba: white
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 158, 9
+                pos: 162, 546
+        
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]T[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "tickers"
+            color: white
+            line_height: .8
+            size_hint: None, None
+            pos: 68, 505 
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 150, 555
+            text: ""
+            foreground_color: white
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 0, 0
+        
+        Label:
+            markup: True
+            text: "AMZN(10)\r\rBAC(20)\r\rMETA(10)\nBK(25)\r\rAMD(10)\r\rC(25)\r\rNVDA(15)"
+            color: white
+            line_height: 1
+            size_hint: None, None
+            pos: 440, 508
+            font_size: "14dp"
+            font_name: "ClashDisplay Regular"
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 0, 0
+        
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]w[/font]eeks"
+            color: green
+            line_height: 1
+            size_hint: None, None
+            pos: 365, 426
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+            
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]m[/font]onths"
+            color: green
+            line_height: 1
+            size_hint: None, None
+            pos: 470, 426
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+            
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]y[/font]ears"
+            color: green
+            line_height: 1
+            size_hint: None, None
+            pos: 560, 426
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"    
+    
+    
+    RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 0, -76
+        
+        canvas.before:
+            Color:
+                rgba: green
+            RoundedRectangle:
+                size: 30, 30
+                pos: 50, 546
+                radius: [6]
+            
+            Rectangle:
+                size: 161, 9
+                pos: 159, 546
+                
+            Color:
+                rgba: grey
+            Line:
+                points: (50, 520, 640, 520)
+                width: 1
+        
+        Label:
+            markup: True
+            text: "[font=fonts/ClashDisplay-Semibold]P[/font]"
+            color: black
+            pos: 15, 511
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        Label:
+            markup: True
+            text: "time\nperiod"
+            color: green
+            line_height: .8
+            size_hint: None, None
+            pos: 68, 510
+            font_size: "18dp"
+            font_name: "ClashDisplay Regular"
+        
+        TextInput:
+            id: my_text_input
+            size_hint: None, None
+            size: 170, 50
+            pos: 159, 555
+            text: "5"
+            foreground_color: green
+            background_color: black
+            background_normal: ''
+            font_size: "39dp"
+            font_name: "ClashDisplay Regular"
+            #on_text_validate: root.on_text_validate(self)
     
     RelativeLayout:
         Label:
