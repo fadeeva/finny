@@ -16,6 +16,8 @@ from kivy.core.text import LabelBase
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 
+from kivy.properties import StringProperty
+
 import helpers
 
 class MainMenuLayout(Screen):
@@ -41,6 +43,7 @@ class MainMenuLayout(Screen):
     def on_button_click(self, widget):
         print(helpers.clean_text(widget.text))
     
+    
 
 
 class StockInfoLayout(Screen):
@@ -53,7 +56,9 @@ class CashFlowLayout(Screen):
     pass
 
 class PortfolioManagementLayout(Screen):
-    pass
+    toggle_btn_state = StringProperty('down normal normal')
+    def on_toggle_button_state(self, widget):
+        print(widget.name, widget.state, self.toggle_btn_state)
 
 class CFDLayout(Screen):
     pass

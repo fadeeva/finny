@@ -291,6 +291,7 @@ WindowManager:
             font_name: "ClashDisplay Regular"
         
         ToggleButton:
+            name: "weeks"
             canvas.before:
                 Color:
                     rgba: grey if self.state == 'normal' else green
@@ -303,6 +304,8 @@ WindowManager:
             size_hint: None, None
             background_color: (0,0,0,0)
             background_normal: ''
+            on_state: root.on_toggle_button_state(self)
+            state: root.toggle_btn_state.split()[0]
         
         Label:
             markup: True
@@ -315,6 +318,7 @@ WindowManager:
             font_name: "ClashDisplay Regular"
         
         ToggleButton:
+            name: "months"
             canvas.before:
                 Color:
                     rgba: grey if self.state == 'normal' else green
@@ -327,6 +331,8 @@ WindowManager:
             size_hint: None, None
             background_color: (0,0,0,0)
             background_normal: ''
+            on_state: root.on_toggle_button_state(self)
+            state: root.toggle_btn_state.split()[1]
             
         Label:
             markup: True
@@ -339,6 +345,7 @@ WindowManager:
             font_name: "ClashDisplay Regular"
         
         ToggleButton:
+            name: "years"
             canvas.before:
                 Color:
                     rgba: grey if self.state == 'normal' else green
@@ -351,6 +358,8 @@ WindowManager:
             size_hint: None, None
             background_color: (0,0,0,0)
             background_normal: ''
+            on_state: root.on_toggle_button_state(self)
+            state: root.toggle_btn_state.split()[2]
     
     
     RelativeLayout:
