@@ -1,8 +1,7 @@
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
-from kivy.graphics.vertex_instructions import Line
-from kivy.graphics.vertex_instructions import Rectangle
+from kivy.graphics.vertex_instructions import Line, Rectangle, Ellipse
 from kivy.graphics.context_instructions import Color
 from kivy.metrics import dp
 from kivy.core.window import Window
@@ -16,7 +15,7 @@ from kivy.core.text import LabelBase
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 
-from kivy.properties import StringProperty
+from kivy.properties import StringProperty, ListProperty
 
 import helpers
 
@@ -56,9 +55,17 @@ class CashFlowLayout(Screen):
     pass
 
 class PortfolioManagementLayout(Screen):
-    toggle_btn_state = StringProperty('down normal normal')
+    
+    state_str = 'normal normal normal'
+    toggle_btn_state = StringProperty(state_str)
+    
+    def change_color(self, instance):
+        instance.canvas.add(Color(1., 1., 0))
+        self.canvas.add(Ellipse(size=(10, 10), pos=(100, 100)))
+            
     def on_toggle_button_state(self, widget):
-        print(widget.name, widget.state, self.toggle_btn_state)
+#        print(self.canvas)
+        self.toggle_btn_state = 'down down down'
 
 class CFDLayout(Screen):
     pass

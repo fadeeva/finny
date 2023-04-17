@@ -294,7 +294,7 @@ WindowManager:
             name: "weeks"
             canvas.before:
                 Color:
-                    rgba: grey if self.state == 'normal' else green
+                    rgba: grey
                 Ellipse:
                     size: sp(10), sp(10)
                     pos: int(self.center_x - sp(5)), int(self.center_y - sp(5))
@@ -306,8 +306,9 @@ WindowManager:
             background_normal: ''
             on_state: root.on_toggle_button_state(self)
             state: root.toggle_btn_state.split()[0]
+            on_press: root.change_color(self)
         
-        Label:
+        Label:          
             markup: True
             text: "[font=fonts/ClashDisplay-Semibold]m[/font]onths"
             color: green
