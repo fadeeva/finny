@@ -56,16 +56,23 @@ class CashFlowLayout(Screen):
 
 class PortfolioManagementLayout(Screen):
     
-    state_str = 'normal normal normal'
+    state_str = 'down normal normal'
     toggle_btn_state = StringProperty(state_str)
-    
-    def change_color(self, instance):
-        instance.canvas.add(Color(1., 1., 0))
-        self.canvas.add(Ellipse(size=(10, 10), pos=(100, 100)))
-            
+
+    def __init__(self, **kwargs):
+        super(PortfolioManagementLayout, self).__init__(**kwargs)
+        
     def on_toggle_button_state(self, widget):
-#        print(self.canvas)
-        self.toggle_btn_state = 'down down down'
+        self.ids['years'].state = 'down'
+        print(self.ids['years'].state)
+    
+#        widget.canvas.add(Color(.133, .627, .239))
+#        widget.canvas.add(Ellipse(size=(10, 10), pos=(int(self.center_x-100), int(self.center_y))))
+#        
+#        
+#        widget.canvas.add(Color(0.113, 0.113, 0.168))
+#        widget.canvas.add(Ellipse(size=(10, 10), pos=(int(self.center_x-50), int(self.center_y))))
+#        widget.canvas.add(Ellipse(size=(10, 10), pos=(int(self.center_x), int(self.center_y))))
 
 class CFDLayout(Screen):
     pass

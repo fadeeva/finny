@@ -291,10 +291,10 @@ WindowManager:
             font_name: "ClashDisplay Regular"
         
         ToggleButton:
-            name: "weeks"
+            id: weeks
             canvas.before:
                 Color:
-                    rgba: grey
+                    rgba: grey if self.state == 'normal' else green
                 Ellipse:
                     size: sp(10), sp(10)
                     pos: int(self.center_x - sp(5)), int(self.center_y - sp(5))
@@ -304,9 +304,9 @@ WindowManager:
             size_hint: None, None
             background_color: (0,0,0,0)
             background_normal: ''
-            on_state: root.on_toggle_button_state(self)
-            state: root.toggle_btn_state.split()[0]
-            on_press: root.change_color(self)
+            on_release: root.on_toggle_button_state(self)
+            # state: root.toggle_btn_state.split()[0]
+            # on_press: root.change_color(self)
         
         Label:          
             markup: True
@@ -319,7 +319,7 @@ WindowManager:
             font_name: "ClashDisplay Regular"
         
         ToggleButton:
-            name: "months"
+            id: months
             canvas.before:
                 Color:
                     rgba: grey if self.state == 'normal' else green
@@ -333,7 +333,7 @@ WindowManager:
             background_color: (0,0,0,0)
             background_normal: ''
             on_state: root.on_toggle_button_state(self)
-            state: root.toggle_btn_state.split()[1]
+            # state: root.toggle_btn_state.split()[1]
             
         Label:
             markup: True
@@ -346,7 +346,7 @@ WindowManager:
             font_name: "ClashDisplay Regular"
         
         ToggleButton:
-            name: "years"
+            id: years
             canvas.before:
                 Color:
                     rgba: grey if self.state == 'normal' else green
@@ -360,7 +360,7 @@ WindowManager:
             background_color: (0,0,0,0)
             background_normal: ''
             on_state: root.on_toggle_button_state(self)
-            state: root.toggle_btn_state.split()[2]
+            # state: root.toggle_btn_state.split()[2]
     
     
     RelativeLayout:
