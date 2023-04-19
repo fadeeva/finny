@@ -304,9 +304,7 @@ WindowManager:
             size_hint: None, None
             background_color: (0,0,0,0)
             background_normal: ''
-            on_release: root.on_toggle_button_state(self)
-            # state: root.toggle_btn_state.split()[0]
-            # on_press: root.change_color(self)
+            on_state: root.on_toggle_button_state(self)
         
         Label:          
             markup: True
@@ -333,7 +331,6 @@ WindowManager:
             background_color: (0,0,0,0)
             background_normal: ''
             on_state: root.on_toggle_button_state(self)
-            # state: root.toggle_btn_state.split()[1]
             
         Label:
             markup: True
@@ -360,7 +357,6 @@ WindowManager:
             background_color: (0,0,0,0)
             background_normal: ''
             on_state: root.on_toggle_button_state(self)
-            # state: root.toggle_btn_state.split()[2]
     
     
     RelativeLayout:
