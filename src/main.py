@@ -59,18 +59,19 @@ class PortfolioManagementLayout(Screen):
         super(PortfolioManagementLayout, self).__init__(**kwargs)
         
     def on_toggle_button_state(self, instance):
-        # self.ids['years'].state = 'down'
         btn_ids = ['weeks', 'months', 'years']
+        
         current_btn_id = ''
         for id, widget in self.ids.items():
             if widget.__self__ == instance:
                 current_btn_id = id
                 break
-        print(f'current ID: {current_btn_id}')
+
         if self.ids[current_btn_id].state == 'down':
             for i in range(len(btn_ids)):
                 if current_btn_id != btn_ids[i]:
-                    print(f'{btn_ids[i]} - normal')
+                    self.ids[btn_ids[i]].state = 'normal'
+                    
 
 class CFDLayout(Screen):
     pass

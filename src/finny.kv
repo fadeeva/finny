@@ -304,7 +304,9 @@ WindowManager:
             size_hint: None, None
             background_color: (0,0,0,0)
             background_normal: ''
-            on_state: root.on_toggle_button_state(self)
+            state: 'down'
+            disabled: True if self.state == 'down' else False
+            on_press: root.on_toggle_button_state(self)
         
         Label:          
             markup: True
@@ -330,7 +332,8 @@ WindowManager:
             size_hint: None, None
             background_color: (0,0,0,0)
             background_normal: ''
-            on_state: root.on_toggle_button_state(self)
+            disabled: True if self.state == 'down' else False
+            on_press: root.on_toggle_button_state(self)
             
         Label:
             markup: True
@@ -356,7 +359,8 @@ WindowManager:
             size_hint: None, None
             background_color: (0,0,0,0)
             background_normal: ''
-            on_state: root.on_toggle_button_state(self)
+            disabled: True if self.state == 'down' else False
+            on_press: root.on_toggle_button_state(self)
     
     
     RelativeLayout:
