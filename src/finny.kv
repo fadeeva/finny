@@ -418,6 +418,78 @@ WindowManager:
             #on_text_validate: root.on_text_validate(self)
     
     RelativeLayout:
+        orientation: "horizontal"
+        size_hint: None, None
+        pos: 0, -194
+        
+        canvas.before:
+            Color:
+                rgba: grey
+            Line:
+                points: (50, 520, 640, 520)
+                width: 1
+        
+        Label:
+            markup: True
+            text: "DIVERSIFICATION\nRATIO"
+            color: white
+            #line_height: .8
+            size_hint: None, None
+            pos: 70, 550
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
+
+        Label:
+            markup: True
+            text: "0.64"
+            color: yellow
+            #line_height: .8
+            size_hint: None, None
+            pos: 180, 515
+            font_size: "66dp"
+            font_name: "ClashDisplay Regular"
+
+        Label:
+            markup: True
+            text: "%"
+            color: white
+            #line_height: .8
+            size_hint: None, None
+            pos: 260, 500
+            font_size: "22dp"
+            font_name: "ClashDisplay Regular"
+
+        Label:
+            markup: True
+            text: "NET ASSET VALUE\nPER SHARE"
+            color: white
+            #line_height: .8
+            size_hint: None, None
+            pos: 390, 550
+            font_size: "16dp"
+            font_name: "ClashDisplay Regular"
+
+        Label:
+            markup: True
+            text: "2.04"
+            color: yellow
+            #line_height: .8
+            size_hint: None, None
+            pos: 520, 515
+            font_size: "66dp"
+            font_name: "ClashDisplay Regular"
+
+        Label:
+            markup: True
+            text: "$"
+            color: white
+            #line_height: .8
+            size_hint: None, None
+            pos: 440, 500
+            font_size: "22dp"
+            font_name: "ClashDisplay Regular"
+    
+    RelativeLayout:
         Label:
             markup: True
             text: "[font=fonts/consolab]q[/font] - Close"
